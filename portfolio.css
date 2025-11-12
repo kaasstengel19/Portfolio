@@ -1,0 +1,232 @@
+body {
+  background: radial-gradient(at 30% 30%, #ffffff, #99c4f5),
+              radial-gradient(at 70% 70%, #99b8ff, #5c9eca);
+  background-size: 200% 200%;
+  animation: meshMove 8s ease-in-out infinite;
+}
+
+@keyframes meshMove {
+  0% { background-position: 0% 0%, 100% 100%; }
+  50% { background-position: 100% 100%, 0% 0%; }
+  100% { background-position: 0% 0%, 100% 100%; }
+}
+
+.MenuBalk{
+    background-color: #070487;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.MenuLinks{
+    width: 50%;
+    display: flex;
+}
+
+.MenuRechts{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+#Home{
+    color: white;
+    font-size: 30px;
+    margin: 40px;
+    text-decoration: none;
+    background-color: rgb(30, 79, 184);
+    border-radius: 10px;
+    width: 130px;
+    text-align: center;
+}
+
+#OverMij{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgb(30, 79, 184);
+    border-radius: 10px;
+    width: 190px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#Contact{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgb(30, 79, 184);
+    border-radius: 10px;
+    width: 140px;
+    text-align: center;
+}
+
+.Content{
+    display: grid;
+    grid-template-columns: 60vw 1fr;
+}
+
+.InfoBox{
+    width: 50%;
+    display: grid;
+    width:800px;
+    Height: 400px;
+    background-color: rgb(30, 79, 184);
+    border-radius: 20px;
+    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
+    margin-left:10%;
+    margin-top: 50px;
+}
+
+.FotoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right:100px;
+    margin-top: 62px;
+}
+
+.Foto1{
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Titel{
+    color: white;
+    font-size: 30px;
+    margin-top: 15%;
+    text-align: center;
+}
+
+.Info{
+    color: white;
+    font-size: 18px;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+.Titel2{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.ProjectBox{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.Projects{
+    width: 400px;
+    height: 700px;
+    background-color: rgb(30, 79, 184);
+    border-radius: 20px;
+    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Titel3{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.Foto2{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-left: 13%;
+}
+
+.Link{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.ContactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+.ContactBox {
+  background-color: rgba(30, 79, 184, 0.9);
+  width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.TitelContact {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.InfoContact {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ContactForm input,
+.ContactForm textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.ContactForm button {
+  background-color: white;
+  color: rgb(30, 79, 184);
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ContactForm button:hover {
+  background-color: #f0f4ff;
+}
+
+.Content2{
+    display: flex;
+    grid-template-columns: 3fr 1fr;
+}
+
+.InfoBox2{
+    width: 70%;
+    display: flex;
+    width:800px;
+    Height: 280px;
+    background-color: rgb(30, 79, 184);
+    border-radius: 20px;
+    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
+    margin-left:23%;
+}
