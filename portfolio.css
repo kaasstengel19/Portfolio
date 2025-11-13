@@ -1,206 +1,310 @@
 body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   background: radial-gradient(at 30% 30%, #ffffff, #99c4f5),
               radial-gradient(at 70% 70%, #99b8ff, #5c9eca);
   background-size: 200% 200%;
   animation: meshMove 8s ease-in-out infinite;
+  color: white;
 }
-
 @keyframes meshMove {
   0% { background-position: 0% 0%, 100% 100%; }
   50% { background-position: 100% 100%, 0% 0%; }
   100% { background-position: 0% 0%, 100% 100%; }
 }
 
-.MenuBalk{
+/* 🧭 Navigation Bar */
+.MenuBalk {
+  background-color: #070487;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-radius: 0 0 12px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.Logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.Menu {
+  display: flex;
+  gap: 30px;
+}
+.NavLink {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+.NavLink:hover, .NavLink.active {
+  background: rgb(30, 79, 184);
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile Menu */
+.MobileMenuIcon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .Menu {
+    display: none;
+    flex-direction: column;
     background-color: #070487;
+    position: absolute;
+    top: 80px;
+    right: 0;
     width: 100%;
-    height: 120px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .Menu.active {
     display: flex;
-    border-radius: 8px;
-}
-
-.MenuLinks{
-    width: 50%;
-    display: flex;
-}
-
-.MenuRechts{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 40px;
-}
-
-#Home{
-    color: white;
-    font-size: 30px;
-    margin: 40px;
-    text-decoration: none;
-    background-color: rgb(30, 79, 184);
-    border-radius: 10px;
-    width: 130px;
-    text-align: center;
-}
-
-#OverMij{
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-    background-color: rgb(30, 79, 184);
-    border-radius: 10px;
-    width: 190px;
-    text-align: center;
-    margin-right: 20px;
-}
-
-#Contact{
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-    background-color: rgb(30, 79, 184);
-    border-radius: 10px;
-    width: 140px;
-    text-align: center;
-}
-
-.Content{
-    display: grid;
-    grid-template-columns: 60vw 1fr;
-}
-
-.InfoBox{
-    width: 50%;
-    display: grid;
-    width:800px;
-    Height: 400px;
-    background-color: rgb(30, 79, 184);
-    border-radius: 20px;
-    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
-    margin-left:10%;
-    margin-top: 50px;
-}
-
-.FotoContainer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-right:100px;
-    margin-top: 62px;
-}
-
-.Foto1{
-    width: 250px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
-}
-
-.Titel{
-    color: white;
-    font-size: 30px;
-    margin-top: 15%;
-    text-align: center;
-}
-
-.Info{
-    color: white;
-    font-size: 18px;
-    width: 70%;
-    margin-left: 15%;
-    text-align: center;
-}
-
-.Titel2{
-    color: black;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 10%;
-    padding-bottom: 5%;
-}
-
-.ProjectBox{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.Projects{
-    width: 400px;
-    height: 700px;
-    background-color: rgb(30, 79, 184);
-    border-radius: 20px;
-    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
-}
-
-.Titel3{
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    padding-top: 5%;
-}
-
-.Foto2{
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
+  }
+  .MobileMenuIcon {
     display: block;
-    margin-left: 13%;
+  }
 }
 
-.Link{
-    color: rgb(255, 255, 255);
-    font-size: 25px;
+/* 🧑‍💻 Hero Section */
+.HeroSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+.InfoBox {
+  background-color: rgba(30, 79, 184, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.Foto1 {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+.ctaButton {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: white;
+  color: rgb(30, 79, 184);
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.ctaButton:hover {
+  background-color: #f0f4ff;
+  transform: scale(1.05);
+}
+
+/* 💼 Projects */
+.ProjectsSection {
+  color: black;
+  text-align: center;
+  padding: 100px 20px;
+}
+.Titel2 {
+  color: black;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+.ProjectBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.Projects {
+  background-color: rgb(30, 79, 184);
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.Projects:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+.Foto2 {
+  width: 80%;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+.Link {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.Link:hover {
+  background-color: white;
+  color: rgb(30, 79, 184);
+}
+
+/* ⚡ Footer */
+footer {
+  background-color: #070487;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 👤 Over Mij Section */
+.OverMijSection {
+  color: black;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.OverMijContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.OverMijFoto {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.OverMijImg {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.OverMijImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.OverMijTekst {
+  flex: 1.5;
+  background-color: rgba(30, 79, 184, 0.9);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 40px;
+  max-width: 700px;
+  line-height: 1.6;
+  text-align: left;
+  font-size: 18px;
+}
+
+.OverMijTekst strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .OverMijContainer {
+    flex-direction: column;
     text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+  }
+  .OverMijTekst {
+    text-align: center;
+  }
+  .OverMijImg {
+    width: 250px;
+  }
 }
 
+/* 💬 Contact Section */
 .ContactSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  min-height: 90vh;
 }
 
 .ContactBox {
-  background-color: rgba(30, 79, 184, 0.9);
-  width: 600px;
+  background-color: rgba(30, 79, 184, 0.95);
+  width: 650px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  padding: 40px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  padding: 50px 40px;
   text-align: center;
   color: white;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.2s ease forwards;
 }
 
 .TitelContact {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .InfoContact {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  color: #e0e6ff;
 }
 
+/* 📋 Contact Form */
 .ContactForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .ContactForm input,
 .ContactForm textarea {
   width: 100%;
-  padding: 15px;
+  padding: 15px 18px;
   border: none;
   border-radius: 10px;
   font-size: 16px;
   outline: none;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
 
+.ContactForm input:focus,
+.ContactForm textarea:focus {
+  box-shadow: 0 0 0 3px #b3d1ff;
+  transform: scale(1.02);
+}
+
+/* ✉️ Button */
 .ContactForm button {
-  background-color: white;
+  background: linear-gradient(135deg, #ffffff, #e0e6ff);
   color: rgb(30, 79, 184);
   border: none;
   border-radius: 10px;
@@ -208,25 +312,54 @@ body {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
-
 .ContactForm button:hover {
-  background-color: #f0f4ff;
+  background: white;
+  transform: scale(1.05);
 }
 
-.Content2{
-    display: flex;
-    grid-template-columns: 3fr 1fr;
+/* ✅ Feedback Messages */
+.MessageContainer {
+  margin-top: 20px;
+  text-align: center;
 }
 
-.InfoBox2{
-    width: 70%;
-    display: flex;
-    width:800px;
-    Height: 280px;
-    background-color: rgb(30, 79, 184);
-    border-radius: 20px;
-    box-shadow: 20px 5px 2px rgba(0, 0, 0, 0.2);
-    margin-left:23%;
+.successMessage,
+.errorMessage {
+  display: none;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 12px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.successMessage {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #b6ffb3;
+}
+
+.errorMessage {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffb3b3;
+}
+
+/* 🌈 Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  .ContactBox {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  .TitelContact {
+    font-size: 28px;
+  }
 }
