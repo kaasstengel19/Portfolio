@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
-    <title>Over Mij</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="portfolio.css" />
+  <title>Over Mij | Rick Mali</title>
 </head>
 <body>
-<div class="MenuBalk">
-        <div class="MenuLinks">
-        <a href="Home.html" id="Home">Home</a>
+  <header class="MenuBalk">
+    <div class="Logo">Rick Mali</div>
+    <nav class="Menu">
+      <a href="Home.html" class="NavLink">Home</a>
+      <a href="OverMij.html" class="NavLink active">Over Mij</a>
+      <a href="Contact.html" class="NavLink">Contact</a>
+    </nav>
+    <div class="MobileMenuIcon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main>
+    <section class="OverMijSection">
+      <h1 class="Titel2">Over Mij</h1>
+      <div class="OverMijContainer">
+        <div class="OverMijFoto fade-in-delayed">
+          <img src="Downloads/Rick4.jpg" alt="Rick Mali" class="OverMijImg" />
         </div>
+        <div class="OverMijTekst fade-in">
+          <p>
+            Mijn naam is <strong>Rick Mali</strong> en ik ben 19 jaar oud. Momenteel volg ik de opleiding 
+            <strong>Software Development</strong> aan het ROC Almere Buiten. Ik koos voor deze richting omdat coderen 
+            mij altijd heeft gefascineerd. Het geeft mij de mogelijkheid om iets te creëren, logisch te denken en 
+            problemen op te lossen — en dat vind ik geweldig.
+          </p>
 
-        <div class="MenuRechts">
-        <a href="OverMij.html" id="OverMij">Over Mij</a>
-        <a href="Contact.html" id="Contact">Contact</a>
+          <p>
+            Mensen beschrijven mij als rustig en gefocust. In mijn werk vind ik het belangrijk om 
+            <strong>nadenktijd</strong> te hebben en gestructureerd te werken. 
+            Ik leer graag nieuwe technologieën en probeer mezelf constant te verbeteren.
+          </p>
+
+          <p>
+            Mijn sterke punten zijn <strong>zelfmotivatie</strong>, <strong>inzicht</strong> en <strong>doorzettingsvermogen</strong>. 
+            Ik ben zelfstandig, leergierig en niet bang om nieuwe uitdagingen aan te gaan.
+          </p>
+
+          <p>
+            In de toekomst wil ik een ervaren developer worden en mijn familie goed kunnen ondersteunen. 
+            Tijdens mijn stage wil ik vooral leren hoe het echte werkleven eruitziet en waardevolle ervaring opdoen 
+            om later met vertrouwen in de IT-wereld te kunnen werken.
+          </p>
+
+          <a href="Contact.html" class="ctaButton">Neem contact met mij op</a>
         </div>
-</div>
-<div>
-    <h1 class="Titel2">Over Mij</h1>
-</div>
+      </div>
+    </section>
+  </main>
 
-    <div class="InfoBox2">
-           <p class="Info">Mijn naam is Rick Mali en ik ben 19 jaar. Ik volg de opleiding Software Development aan het ROC Almere Buiten. Ik heb voor deze opleiding gekozen omdat coderen mij altijd al heeft geïnteresseerd en ik iets wilde doen dat minder fysiek was, zodat ik meer balans kon vinden. Ik ben iemand die graag nieuwe dingen wil leren. Mensen zeggen vaak dat ik rustig of stil ben. In mijn werk vind ik het belangrijk om de ruimte te hebben om na te denken.
+  <footer>
+    <p>© 2025 Rick Mali — Alle rechten voorbehouden</p>
+  </footer>
 
-            Mijn sterke punten zijn mijn zelfmotivatie en inschattingsvermogen. Ik ben actief, zelfstandig en leergierig.
-
-            In de toekomst wil ik ervaren zijn in mijn vak en goed voor mijn familie kunnen zorgen. Tijdens mijn stage hoop ik te leren hoe ik in het echte werkleven aan de slag ga. Mijn doel is om tijdens mijn stage genoeg ervaring op te doen om daarna in het bedrijfsleven te kunnen werken.</p>
-    </div>
-
+  <script>
+    function toggleMenu() {
+      document.querySelector(".Menu").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
